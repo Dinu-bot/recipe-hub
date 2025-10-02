@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Recipe Hub - Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Hub</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,48 +17,96 @@
             padding: 20px 0;
             text-align: center;
         }
-        main {
-            max-width: 700px;
-            margin: 40px auto;
+        nav {
+            background: #ffe0b2;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #ff7043;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
             background: white;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
         }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
+        .featured-recipes {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .intro {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            color: #444;
+        .recipe-card {
+            background: #fff3e0;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            padding: 16px;
+            width: 220px;
+            text-align: center;
         }
-        .btn {
-            display: inline-block;
-            background: #ff7043;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
+        .recipe-card img {
+            width: 100%;
+            border-radius: 4px;
+            height: 120px;
+            object-fit: cover;
         }
-        .btn:hover {
-            background: #ff5722;
+        .recipe-card h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.1em;
+        }
+        .recipe-card p {
+            font-size: 0.95em;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #ffe0b2;
+            color: #ff7043;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Recipe Hub</h1>
-        <p>Your gateway to delicious recipes!</p>
+        <p>A place to share and discover recipes with friends!</p>
     </header>
-    <main>
-        <div class="intro">
-            Welcome to Recipe Hub! Discover, share, and enjoy a variety of recipes from around the world. Whether you're a beginner or a seasoned chef, you'll find something tasty here.
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Recipes</a>
+        <a href="#">Submit Recipe</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Featured Recipes</h2>
+        <div class="featured-recipes">
+            <div class="recipe-card">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Spaghetti">
+                <h3>Classic Spaghetti</h3>
+                <p>A simple and delicious Italian pasta dish with tomato sauce.</p>
+            </div>
+            <div class="recipe-card">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=400&q=80" alt="Salad">
+                <h3>Fresh Garden Salad</h3>
+                <p>Crisp veggies tossed with a light vinaigrette dressing.</p>
+            </div>
+            <div class="recipe-card">
+                <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Pancakes">
+                <h3>Fluffy Pancakes</h3>
+                <p>Perfect breakfast pancakes topped with maple syrup.</p>
+            </div>
         </div>
-        <a href="#" class="btn">Browse Recipes</a>
-    </main>
+    </div>
+    <footer>
+        &copy; 2024 Recipe Hub. All rights reserved.
+    </footer>
 </body>
 </html>
